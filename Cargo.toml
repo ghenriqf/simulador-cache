@@ -1,0 +1,12 @@
+[package]
+name = "simulador-cache"
+version = "1.0.0"
+edition = "2024"
+authors = ["Gabriel Henrique", "João Matheus", "Luciano Tomasi"]
+description = "Simulador de cache com LRU, write-back/write-through e classificação das faltas (3C)"
+
+[[bin]]
+name = "simcache"
+path = "src/main.rs"
+
+[dependencies]
