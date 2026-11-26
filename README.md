@@ -90,13 +90,27 @@ OK     C4_classificacao
 Calibracao completa: 4/4 identicos.
 ```
 
+## Experimentos
+
+O script `experimentos.ps1` roda todas as configurações pedidas (E1–E6 e Desafio), grava a saída completa de cada uma em `resultados/` e monta as tabelas em `resultados/tabelas.md`:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File experimentos.ps1
+```
+
+O relatório com tabelas e justificativas está em [`relatorio/RELATORIO.md`](relatorio/RELATORIO.md).
+
 ## Estrutura
 
 ```
 ├── src/main.rs          código do simulador
 ├── tracos/
 │   ├── calibracao/      traços C1–C4 e respectivas saídas esperadas
-│   └── experimentos/    traços E1–E6
+│   ├── experimentos/    traços E1–E6 (+ E3_dois_vetores_modificado.txt)
+│   └── desafio/         traço do desafio
+├── resultados/          saídas do simulador para cada experimento
+├── relatorio/           relatório dos experimentos
 ├── docs/enunciado.pdf   enunciado do trabalho
-└── calibrar.ps1         verificação automática da calibração
+├── calibrar.ps1         verificação automática da calibração
+└── experimentos.ps1     roda todos os experimentos
 ```
